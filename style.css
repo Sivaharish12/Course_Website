@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    color: rgb(16, 16, 16);
+}
+    
+.heading-text{
+    display: inline-block;
+    height: 180px;
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+
+.heading-main{
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    right: 42%;
+    letter-spacing: 10px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+
+.heading-sub{
+    font-size: 26px;
+    position: absolute;
+    top: 77%;
+    right: 40%;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-100%);
+    }
+    80% {
+      transform: translate(10%); 
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translate(100%); }
+    80% {
+      transform: translate(-10%); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+
+
+
+.rotating-box {
+    width: 50px;
+    height: 50px;
+    background-color: #1a73e8;
+    position: fixed;
+    top: 0;
+    animation: rotate 4s linear infinite; 
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.top-left {
+    left: 5%;
+    top: 5%;
+    display: inline-block;
+}
+
+.top-right {
+    right: 5%;
+    top: 5%;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.contents{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    margin-top: 30px;
+    height: 320px;
+    width: 30%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-left: 50px;
+}
+
+.container:hover {
+    transform: scale(1.07); 
+    box-shadow: 15px 15px 10px rgba(249, 46, 178, 0.695);
+}
+
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.course-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.course-name {
+    display: block;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    background-color: #1a73e8;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(75, 33, 75,0.2);
+    margin-top: 15px;
+}
+
+.contents-summary{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.evoloving-technology{
+    height: 100%;
+    width: 400px;
+    margin-right: 30px;  
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.web-technology{
+    height: 100%;
+    width: 400px;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 20px; 
+}
+
+.ai{
+    height: 100%;
+    width: 400px;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 20px; 
+}
+
+.list{
+    margin-top: 30px;
+    list-style: none;
+}
+
+.footer-foot{
+    margin-top: 19px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(32, 3, 32, 0.485);
+}
+
+.footer-container{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+/* Social media css */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius:30px;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 30px;
+  }
+
+  .fa-instagram {
+    background-image: linear-gradient(violet,red,yellow);
+    color: white;
+    border-radius: 30px;
+  }
+
+.footer-para{
+    font-size: large;
+    color: white;
+    opacity: 0.9;
+    font-weight: 300;
+    padding-top: 25px;
+    margin-right: 600px;
+}
